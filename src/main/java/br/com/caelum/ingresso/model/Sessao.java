@@ -12,7 +12,10 @@ public class Sessao {
     private Integer id;
 	
     private LocalTime horario;
+    
+    @ManyToOne
     private Sala sala;
+    @ManyToOne
     private Filme filme;
     
     /**
