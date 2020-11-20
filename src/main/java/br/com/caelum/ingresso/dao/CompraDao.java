@@ -5,20 +5,16 @@ import javax.persistence.PersistenceContext;
 
 import org.springframework.stereotype.Repository;
 
-import br.com.caelum.ingresso.model.Lugar;
+import br.com.caelum.ingresso.model.Compra;
 
 @Repository
-public class LugarDao {
+public class CompraDao {
 
     @PersistenceContext
     private EntityManager manager;
 
-    public void save(Lugar lugar) {
-        manager.persist(lugar);
-    }
-
-    public Lugar findOne(Integer id) {
-        return manager.find(Lugar.class, id);
+    public void save(Compra compra) {
+        manager.persist(compra);
     }
 
 }

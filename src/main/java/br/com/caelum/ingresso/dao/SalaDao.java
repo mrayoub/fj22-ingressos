@@ -1,15 +1,14 @@
 package br.com.caelum.ingresso.dao;
 
-import br.com.caelum.ingresso.model.Sala;
-import org.springframework.stereotype.Repository;
+import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import java.util.List;
 
-/**
- * Created by nando on 03/03/17.
- */
+import org.springframework.stereotype.Repository;
+
+import br.com.caelum.ingresso.model.Sala;
+
 @Repository
 public class SalaDao {
 
@@ -17,7 +16,6 @@ public class SalaDao {
     private EntityManager manager;
 
     public Sala findOne(Integer id) {
-
         return manager.find(Sala.class, id);
     }
 
@@ -32,4 +30,5 @@ public class SalaDao {
     public void delete(Integer id) {
         manager.remove(findOne(id));
     }
+
 }

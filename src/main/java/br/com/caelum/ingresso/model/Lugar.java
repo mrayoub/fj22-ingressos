@@ -1,16 +1,13 @@
 package br.com.caelum.ingresso.model;
 
-import org.hibernate.validator.constraints.NotBlank;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
 
-/**
- * Created by nando on 03/03/17.
- */
+import org.hibernate.validator.constraints.NotBlank;
+
 @Entity
 public class Lugar {
 
@@ -66,6 +63,7 @@ public class Lugar {
         result = prime * result + ((fileira == null) ? 0 : fileira.hashCode());
         result = prime * result + ((id == null) ? 0 : id.hashCode());
         result = prime * result + ((posicao == null) ? 0 : posicao.hashCode());
+
         return result;
     }
 
